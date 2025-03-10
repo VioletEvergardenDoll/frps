@@ -3,8 +3,8 @@ bindPort = 7000
 #kcpBindPort = 7000
 quicBindPort = 7000
 
-vhostHTTPPort = 80
-vhostHTTPSPort = 443
+vhostHTTPPort = 18080
+vhostHTTPSPort = 18443
 
 transport.maxPoolCount = 2000
 transport.tcpMux = true
@@ -12,10 +12,12 @@ transport.tcpMuxKeepaliveInterval = 60
 transport.tcpKeepalive = 7200
 transport.tls.force = false
 
+subdomainHost = "clannadve.top"
+
 webServer.addr = "0.0.0.0"
 webServer.port = 7500
 webServer.user = "admin"
-webServer.password = "admin"
+webServer.password = "212060gj"
 webServer.pprofEnable = false
 
 log.to = "./frps.log"
@@ -24,10 +26,13 @@ log.maxDays = 3
 log.disablePrintColor = false
 
 auth.method = "token"
-auth.token = "12345678"
+auth.token = "212060gJ."
 
 allowPorts = [
-  { start = 10001, end = 50000 }
+  { start = 2000, end = 3000 },
+  { single = 3001 },
+  { single = 3003 },
+  { start = 4000, end = 50000 }
 ]
 
 maxPortsPerClient = 8
